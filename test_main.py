@@ -7,10 +7,11 @@ def test_get_total_price():
 
 def test_apply_discount():
     product2 = Product("Холодильник", 25000, 5)
-    product2.apply_discount(0.1)
-    assert product2.get_total_price()
+    product2.price_level = 0.8
+    product2.apply_discount()
+    assert product2.get_total_price() == 100000
 
 
 
 def test_get_total_inventory_value():
-    assert Product.get_total_inventory_value() == 382500
+    assert Product.get_total_inventory_value() == 425000
