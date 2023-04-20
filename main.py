@@ -14,7 +14,7 @@ class Product:
     return self.quantity * self.price * self.price_level
 
   def apply_discount(self):
-      return self.price * self.quantity * self.price_level
+      self.price * self.quantity * self.price_level
 
   @classmethod
   def get_total_inventory_value(self):
